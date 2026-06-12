@@ -1,0 +1,148 @@
+spec: API Commons Plans 0.1
+provider: HouseCanary
+providerId: housecanary
+created: 2026-06-12
+modified: 2026-06-12
+reconciled: true
+url: https://www.housecanary.com/pricing
+plans:
+  - name: Basic
+    type: paid
+    description: >
+      Entry-level plan for individual users needing occasional property valuations
+      and CanaryAI access.
+    price:
+      monthly: 19.00
+      annual: 190.00
+      currency: USD
+    quotas:
+      - name: Custom Valuation Reports
+        type: quota
+        limit: 2
+        period: month
+        unit: reports
+      - name: AVM PDF Reports
+        type: quota
+        limit: 0
+        period: month
+        unit: reports
+        notes: Not included
+      - name: Users
+        type: quota
+        limit: 1
+        period: month
+        unit: users
+    features:
+      - CanaryAI access
+      - Knowledge base support
+      - Brokerage services
+      - Basic platform access
+  - name: Pro
+    type: paid
+    description: >
+      Most popular plan for real estate professionals needing core API access and
+      monthly valuation and AVM PDF reports.
+    price:
+      monthly: 79.00
+      annual: 790.00
+      currency: USD
+    quotas:
+      - name: Custom Valuation Reports
+        type: quota
+        limit: 15
+        period: month
+        unit: reports
+      - name: AVM PDF Reports
+        type: quota
+        limit: 15
+        period: month
+        unit: reports
+      - name: Users
+        type: quota
+        limit: 1
+        period: month
+        unit: users
+    features:
+      - CanaryAI access
+      - Brokerage services
+      - Core API access (usage-based costs apply)
+      - Platform access
+    metered:
+      - name: Property Analytics API calls
+        type: metered
+        price_low: 0.05
+        price_high: 6.00
+        unit: per successful call
+        notes: Price varies by endpoint tier
+  - name: Teams
+    type: paid
+    description: >
+      Plan for teams up to 10 users with advanced API access, SSO, and more
+      included reports per month.
+    price:
+      monthly: 199.00
+      annual: 1990.00
+      currency: USD
+    quotas:
+      - name: Custom Valuation Reports
+        type: quota
+        limit: 40
+        period: month
+        unit: reports
+      - name: AVM PDF Reports
+        type: quota
+        limit: 40
+        period: month
+        unit: reports
+      - name: Users
+        type: quota
+        limit: 10
+        period: month
+        unit: active users
+      - name: Portfolio Monitoring Properties
+        type: quota
+        limit: 50
+        period: month
+        unit: properties
+    features:
+      - CanaryAI access
+      - Advanced API access
+      - SSO
+      - SOC2 reports available
+      - All platform products
+    metered:
+      - name: Additional users
+        type: metered
+        price: 10.00
+        unit: per user per month
+      - name: Extra valuation reports
+        type: metered
+        price_low: 9.00
+        price_high: 12.00
+        unit: per report
+      - name: Portfolio monitoring
+        type: metered
+        price_low: 0.35
+        price_high: 0.45
+        unit: per property per month
+  - name: Enterprise
+    type: enterprise
+    description: >
+      Custom plan for sophisticated real estate enterprises requiring scalable
+      datasets, custom products, and dedicated customer success support.
+    price:
+      type: contact
+      notes: Custom pricing with negotiable minimums
+    quotas:
+      - name: Users
+        type: quota
+        limit: custom
+        period: month
+        unit: users
+    features:
+      - Custom product inclusion
+      - Scalable datasets
+      - Dedicated Customer Success representative
+      - Solutions Engineering access
+      - Compliance questionnaires
+      - Full platform access

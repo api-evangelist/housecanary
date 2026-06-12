@@ -1,0 +1,117 @@
+spec: FinOps Framework 1.0
+provider: HouseCanary
+providerId: housecanary
+created: 2026-06-12
+modified: 2026-06-12
+billingModel: hybrid
+description: >
+  HouseCanary uses a hybrid billing model combining subscription-based platform access
+  (monthly or annual tiers) with usage-based metered charges for API calls and additional
+  reports. Annual subscriptions receive a discount versus monthly billing. API call costs
+  vary by endpoint tier from $0.05 to $6.00 per successful call.
+focusColumns:
+  - BilledCost
+  - UsageQuantity
+  - UsageUnit
+  - ResourceId
+  - ServiceName
+  - ChargeType
+  - ChargeDescription
+meters:
+  - name: Platform Subscription
+    serviceCategory: SaaS
+    chargeType: recurring
+    billingPeriod: month
+    usageUnit: subscription
+    pricingModel: tiered
+    tiers:
+      - tier: Basic
+        monthlyPrice: 19.00
+        annualPrice: 190.00
+        currency: USD
+      - tier: Pro
+        monthlyPrice: 79.00
+        annualPrice: 790.00
+        currency: USD
+      - tier: Teams
+        monthlyPrice: 199.00
+        annualPrice: 1990.00
+        currency: USD
+      - tier: Enterprise
+        monthlyPrice: custom
+        annualPrice: custom
+        currency: USD
+  - name: Property Analytics API Call
+    serviceCategory: API
+    chargeType: usage
+    billingPeriod: month
+    usageUnit: successful API call
+    pricingModel: tiered
+    priceLow: 0.05
+    priceHigh: 6.00
+    currency: USD
+    notes: Price per call depends on endpoint tier (basic data vs. AVM vs. value report)
+  - name: Custom Valuation Report
+    serviceCategory: Report
+    chargeType: usage
+    billingPeriod: month
+    usageUnit: report
+    pricingModel: overage
+    includedInPlan:
+      Basic: 2
+      Pro: 15
+      Teams: 40
+    overagePrice:
+      low: 9.00
+      high: 12.00
+    currency: USD
+  - name: AVM PDF Report
+    serviceCategory: Report
+    chargeType: usage
+    billingPeriod: month
+    usageUnit: report
+    pricingModel: overage
+    includedInPlan:
+      Basic: 0
+      Pro: 15
+      Teams: 40
+    currency: USD
+  - name: Portfolio Monitoring
+    serviceCategory: Monitoring
+    chargeType: usage
+    billingPeriod: month
+    usageUnit: property per month
+    pricingModel: per-unit
+    priceRange:
+      low: 0.35
+      high: 0.45
+    currency: USD
+    includedInPlan:
+      Teams: 50
+  - name: Additional Team Seat
+    serviceCategory: UserLicense
+    chargeType: usage
+    billingPeriod: month
+    usageUnit: active user per month
+    price: 10.00
+    currency: USD
+    applicablePlans:
+      - Teams
+      - Enterprise
+principles:
+  - name: Understand Usage
+    description: >
+      Track API call counts by endpoint tier to understand cost drivers. Batch
+      POST requests (up to 100 items) can improve efficiency and reduce per-call overhead.
+  - name: Optimize Commitment
+    description: >
+      Annual subscriptions provide roughly 17% savings over month-to-month billing
+      across all plan tiers. Choose the appropriate tier to minimize overage charges.
+  - name: Allocate Costs
+    description: >
+      Separate subscription costs from API usage costs in cost allocation. Tag
+      API calls by use case (valuation, risk, rental) to attribute costs to business units.
+  - name: Rightsize Plans
+    description: >
+      Monitor included report usage each month. If consistently exceeding plan limits,
+      upgrade to the next tier to avoid per-unit overage pricing.

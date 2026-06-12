@@ -1,0 +1,76 @@
+spec: API Commons Rate Limits 0.1
+provider: HouseCanary
+providerId: housecanary
+created: 2026-06-12
+modified: 2026-06-12
+url: https://www.housecanary.com/resources/developer-tools
+limits:
+  - name: Analytics API - Self-Serve Rate Limit
+    api: HouseCanary Analytics API
+    scope: account
+    requests: 250
+    period: 60
+    periodUnit: seconds
+    notes: >
+      250 components per minute for self-serve customers across most property-level
+      endpoints (e.g., property/value, property/details, property/rental_value).
+      Batch POST requests count each item in the batch toward this limit.
+    throttled: true
+    throttleStatusCode: 429
+    retryAfter: true
+    retryAfterHeader: Retry-After
+  - name: Analytics API - Daily Limit
+    api: HouseCanary Analytics API
+    scope: account
+    requests: 1000
+    period: 86400
+    periodUnit: seconds
+    notes: >
+      1000 requests per day for self-serve customers on the Analytics API.
+      Enterprise customers can negotiate higher daily limits.
+    throttled: true
+    throttleStatusCode: 429
+  - name: Value Report Endpoint - Per-Minute Rate Limit
+    api: HouseCanary Analytics API
+    scope: account
+    endpoint: /v2/property/value
+    requests: 10
+    period: 60
+    periodUnit: seconds
+    notes: >
+      Value Report and Rental Report endpoints are rate-limited to 10 requests
+      per minute, separate from the general Analytics API limit.
+    throttled: true
+    throttleStatusCode: 429
+    retryAfter: true
+    retryAfterHeader: Retry-After
+  - name: Value Report Endpoint - Daily Limit
+    api: HouseCanary Analytics API
+    scope: account
+    endpoint: /v2/property/value
+    requests: 100
+    period: 86400
+    periodUnit: seconds
+    notes: >
+      100 requests per day for the Value Report endpoint for self-serve customers.
+    throttled: true
+    throttleStatusCode: 429
+  - name: Batch Request Limit
+    api: HouseCanary Analytics API
+    scope: request
+    notes: >
+      POST batch requests support a maximum of 100 items per request.
+      Each item in the batch is counted individually toward rate limits.
+    boolean:
+      - name: batchSupported
+        value: true
+      - name: maxBatchSize
+        value: 100
+batchSupport:
+  supported: true
+  maxItems: 100
+  method: POST
+authentication:
+  type: HTTPBasicAuth
+  notes: API Key as username, API Secret as password. HTTPS required for all requests.
+transport: HTTPS
