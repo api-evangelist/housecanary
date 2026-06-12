@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "hc": "https://www.housecanary.com/vocab#",
+    "avm": "hc:avm",
+    "rentalValue": "hc:rentalValue",
+    "landValue": "hc:landValue",
+    "ltv": "hc:ltv",
+    "salesHistory": "hc:salesHistory",
+    "taxHistory": "hc:taxHistory",
+    "floodData": "hc:floodData",
+    "schoolInfo": "hc:schoolInfo",
+    "marketForecast": "hc:marketForecast",
+    "propertyDetails": "hc:propertyDetails",
+    "valuationOrder": "hc:valuationOrder",
+    "inspectionOrder": "hc:inspectionOrder",
+    "orderStatus": "hc:orderStatus",
+    "webhookEvent": "hc:webhookEvent",
+    "Organization": "Organization",
+    "Product": "Product",
+    "Service": "Service",
+    "Place": "Place",
+    "PostalAddress": "PostalAddress"
+  },
+  "@type": "Organization",
+  "name": "HouseCanary",
+  "url": "https://www.housecanary.com",
+  "description": "HouseCanary is a property analytics platform providing REST APIs for automated valuation model (AVM) data, property details, rental estimates, market forecasts, and risk data across US residential properties.",
+  "sameAs": [
+    "https://github.com/housecanary",
+    "https://www.linkedin.com/company/housecanary-inc",
+    "https://twitter.com/housecanary"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "HouseCanary APIs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "HouseCanary Analytics API",
+        "description": "REST API providing property-level AVM valuations, rental value, land value, LTV, sales history, tax history, flood data, school info, and geographic features.",
+        "url": "https://api-docs-legacy.housecanary.com/",
+        "seller": {
+          "@type": "Organization",
+          "name": "HouseCanary"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "HouseCanary Order Manager API",
+        "description": "REST API for programmatically creating valuation and inspection orders, receiving status updates via webhook, exporting results, and downloading reports.",
+        "url": "https://order-manager-api.housecanary.com/docs/index.html",
+        "seller": {
+          "@type": "Organization",
+          "name": "HouseCanary"
+        }
+      }
+    ]
+  }
+}
