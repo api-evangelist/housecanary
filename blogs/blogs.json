@@ -3,18 +3,18 @@
   "description": "Blog covering real estate analytics, AVM technology, market insights, and property data.",
   "url": "https://www.housecanary.com/resources/blog",
   "rss": null,
-  "note": "No public RSS feed discovered as of 2026-06-12.",
+  "note": "No public RSS/Atom feed resolved (all common feed paths return 404). Blog index scraped as HTML; most recent post (2026-06-11) predates prior fetch cutoff (2026-06-14), so nothing new this run.",
   "posts": [],
   "repo": "housecanary",
   "feeds": [
     {
-      "source": "https://twitter.com/housecanary",
-      "feed_url": "https://twitter.com/housecanary",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "source": "https://www.housecanary.com/resources/blog",
+      "feed_url": "",
+      "saved": 1,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 1,
+  "fetched": "2026-06-27T12:46:32Z",
+  "agent_pulled": "2026-06-27"
 }
