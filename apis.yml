@@ -62,6 +62,8 @@ apis:
       - type: SDKDocumentation
         url: https://order-manager-api.housecanary.com/sdkdocs/index.html
 common:
+  - type: DomainSecurity
+    url: security/housecanary-domain-security.yml
   - type: Website
     url: https://www.housecanary.com
   - type: Documentation
