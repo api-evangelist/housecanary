@@ -17,7 +17,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/housecanar
 url: https://raw.githubusercontent.com/api-evangelist/housecanary/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 description: >
   HouseCanary is a property analytics platform providing REST APIs for automated valuation
   model (AVM) data, property details, rental estimates, market forecasts, and flood/risk
