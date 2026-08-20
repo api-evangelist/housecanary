@@ -28,6 +28,15 @@ description: >
   and receive results via webhook. HouseCanary also offers a Python SDK and a Postman
   collection for integration testing.
 tags:
+  - Real-Estate
+  - Property Analytics
+  - AVM
+  - Valuation
+  - Rental Estimates
+  - Market Forecasts
+  - Mortgage
+  - Property Data
+tags_raw:
   - Real Estate
   - Property Analytics
   - AVM
@@ -64,6 +73,11 @@ apis:
     humanURL: https://order-manager-api.housecanary.com/docs/index.html
     baseURL: https://order-manager-api.housecanary.com
     tags:
+      - Order
+      - Valuation Reports
+      - Webhook
+      - Partner Integration
+    tags_raw:
       - Orders
       - Valuation Reports
       - Webhooks
