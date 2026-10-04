@@ -39,7 +39,7 @@ description: >
   and receive results via webhook. HouseCanary also offers a Python SDK and a Postman
   collection for integration testing.
 tags:
-  - Real-Estate
+  - Real Estate
   - Property Analytics
   - AVM
   - Valuation
@@ -56,6 +56,7 @@ tags_raw:
   - Market Forecasts
   - Mortgage
   - Property Data
+  - Real-Estate
 apis:
   - name: HouseCanary Analytics API
     description: >
