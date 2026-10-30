@@ -1,4 +1,4 @@
-# HouseCanary (housecanary)
+# HouseCanary
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,82 +66,111 @@
 
 HouseCanary is a property analytics platform providing REST APIs for automated valuation model (AVM) data, property details, rental estimates, market forecasts, and flood/risk data across more than 100 million US residential properties. The Analytics API supports property-level endpoints including value, rental value, land value, sales history, tax history, and LTV calculations accessed via HTTP Basic Authentication. The Order Manager API allows clients to programmatically order HouseCanary valuation and inspection products and receive results via webhook. HouseCanary also offers a Python SDK and a Postman collection for integration testing.
 
-APIs.json: https://raw.githubusercontent.com/api-evangelist/housecanary/refs/heads/main/apis.yml
+**Areas:** Real Estate · Property Analytics · AVM · Valuation · Rental Estimates · Market Forecasts · Mortgage · Property Data
 
-Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=housecanary-api-evangelist&utm_content=repo
+## HouseCanary on APIs.io
 
-## Tags
+Everything profiled for HouseCanary is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/housecanary/](https://apis.io/providers/housecanary/)** — or go straight to one of the APIs or properties below.
 
-- Real Estate
-- Property Analytics
-- AVM
-- Valuation
-- Rental Estimates
-- Market Forecasts
-- Mortgage
-- Property Data
+### APIs (2)
 
-## APIs
+- [HouseCanary Analytics API](https://apis.io/apis/housecanary/housecanary-analytics-api/) — REST API providing property-level data including AVM valuations, rental value, land value, LTV, sales history, tax history, flood data, school info, and…
+- [HouseCanary Order Manager API](https://apis.io/apis/housecanary/housecanary-order-manager-api/) — REST API for clients and partners to programmatically create valuation and inspection orders, receive status updates via webhook, export results, and…
 
-### HouseCanary Analytics API
+### Published properties
 
-REST API providing property-level data including AVM valuations, rental value, land value, LTV, sales history, tax history, flood data, school info, and geographic features for US residential properties.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Human URL: https://www.housecanary.com/resources/developer-tools
-- Base URL: https://api.housecanary.com
-- Documentation: https://api-docs-legacy.housecanary.com/
+#### JSON-LD (1)
 
-### HouseCanary Order Manager API
+Linked-data contexts for the provider's vocabulary.
 
-REST API for clients and partners to programmatically create valuation and inspection orders, receive status updates via webhook, export results, and download reports. Includes a sandbox environment for testing.
+- [Housecanary Context](https://apis.io/jsonld/housecanary/housecanary-context/)
 
-- Human URL: https://order-manager-api.housecanary.com/docs/index.html
-- Base URL: https://order-manager-api.housecanary.com
-- Documentation: https://order-manager-api.housecanary.com/docs/client-api.html
-- SDK Documentation: https://order-manager-api.housecanary.com/sdkdocs/index.html
+#### Security (1)
 
-## Plans / Rate Limits / FinOps
+Authentication, trust centre, and vulnerability disclosure.
 
-- Plans & Pricing: [plans/housecanary-plans-pricing.yml](plans/housecanary-plans-pricing.yml)
-- Rate Limits: [rate-limits/housecanary-rate-limits.yml](rate-limits/housecanary-rate-limits.yml)
-- FinOps: [finops/housecanary-finops.yml](finops/housecanary-finops.yml)
+- [Housecanary Domain Security](https://apis.io/security/housecanary/housecanary-domain-security/)
 
-### Pricing Summary
+#### Plans and pricing (1)
 
-| Plan | Monthly | Annual |
-|------|---------|--------|
-| Basic | $19/mo | $190/yr |
-| Pro | $79/mo | $790/yr |
-| Teams | $199/mo | $1,990/yr |
-| Enterprise | Custom | Custom |
+Published plans, tiers and prices.
 
-API call costs range from $0.05 to $6.00 per successful call depending on endpoint tier.
+- [Housecanary Plans Pricing](https://apis.io/plans/housecanary/housecanary-plans-pricing/)
 
-### Rate Limits
+#### Rate limits (1)
 
-- Analytics API: 250 requests/minute, 1,000 requests/day (self-serve)
-- Value Report endpoint: 10 requests/minute, 100 requests/day
-- Batch POST: up to 100 items per request
-- HTTP 429 returned when limits are exceeded
+Published request limits.
 
-## Timestamps
+- [Housecanary Rate Limits](https://apis.io/rate-limits/housecanary/housecanary-rate-limits/)
 
-- Created: 2026-06-12
-- Modified: 2026-06-12
+#### FinOps (1)
 
-## Common Properties
+What the API costs to run, by operation.
 
-| Type | URL |
-|------|-----|
-| Website | https://www.housecanary.com |
-| Documentation | https://www.housecanary.com/resources/developer-tools |
-| GitHub Organization | https://github.com/housecanary |
-| LinkedIn | https://www.linkedin.com/company/housecanary-inc |
-| X (Twitter) | https://twitter.com/housecanary |
-| Blog | https://www.housecanary.com/resources/blog |
-| Pricing | https://www.housecanary.com/pricing |
-| Status Page | https://status.housecanary.com/ |
+- [Housecanary Finops](https://apis.io/finops/housecanary/housecanary-finops/)
 
-## Maintainers
+## Where to find this API
 
-- Kin Lane / kin@apievangelist.com
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.housecanary.com)
+- [Documentation](https://www.housecanary.com/resources/developer-tools)
+- [Pricing](https://www.housecanary.com/pricing)
+- [Blog](https://www.housecanary.com/resources/blog)
+- [GitHub](https://github.com/housecanary)
+- [Status](https://status.housecanary.com/)
+
+## API Evangelist rating
+
+**Kin Score 24.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 34.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/housecanary/](https://apis.io/providers/housecanary/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HouseCanary: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/housecanary/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
